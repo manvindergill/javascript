@@ -1,16 +1,14 @@
 <script>
-    let score = prompt("Enter your score:");
-    if (score >= 90 && score <= 100) {
-        alert("Your grade is: A (90-100)");
-    } else if (score >= 80 && score <= 89) {
-        alert("Your grade is: B (80-89)");
-    } else if (score >= 70 && score <= 79) {
-        alert("Your grade is: C (70-79)");
-    } else if (score >= 60 && score <= 69) {
-        alert("Your grade is: D (60-69)");
-    } else if (score < 60 && score >= 0) {
-        alert("Your grade is: F (below 60)");
-    } else {
-        alert("Please enter a valid score between 0 and 100!");
+    const grade = "A+"
+    const attendance = 80;
+    if (attendance >= 80) {
+        if (grade >= "A+") {
+            alert("You are eligible for certificate");
+        }
     }
+    else {
+        alert("Not eligible for certificate");
+    } 
 </script>
+
+<!-- room access staff and room key access granted request room key from admin/access denied -->
