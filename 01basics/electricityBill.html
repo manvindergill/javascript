@@ -1,18 +1,35 @@
 <script>
-    const units = prompt("Enter your units")
-    var x;
-    if (units <= 100) {
-        var fixedUnit = 50;
-        var totalUnit = fixedUnit + x * 3
-    } else if (100 < units <= 300) {
-        var fixedUnit = 50;
-        var totalUnit = fixedUnit + x * 5
-    }
-    else if (units >= 300) {
-        var fixedUnit = 50;
-        var totalUnit = fixedUnit + x * 10
-    }
-    else {
-        console.log("enter units");
-    }
+// let units = prompt("Enter the number of units consumed:");
+// let bill = 0;
+
+// if (units <= 100) {
+//     // First 100 units: ₹3 per unit
+//     bill = units * 3;
+// } else if (units <= 300) {
+//     // First 100 units: ₹3 per unit + Next 200 units: ₹5 per unit
+//     bill = (100 * 3) + ((units - 100) * 5);
+// } else {
+//     // First 100 units: ₹3 per unit + Next 200 units: ₹5 per unit + Above 300: ₹10 per unit
+//     bill = (100 * 3) + (200 * 5) + ((units - 300) * 10);
+// }
+
+// // Add fixed surcharge of ₹50
+// bill = bill + 50;
+
+
+// alert("Units consumed: " + units + "\nTotal electricity bill: ₹" + bill);
+
+let units = prompt("Enter units consumed:");
+
+// Calculate bill
+if (units <= 100) {
+    let bill = units * 3 + 50;
+    alert("Bill: ₹" + bill);
+} else if (units <= 300) {
+    let bill = 300 + (units - 100) * 5 + 50;
+    alert("Bill: ₹" + bill);
+} else {
+    let bill = 300 + 1000 + (units - 300) * 10 + 50;
+    alert("Bill: ₹" + bill);
+}
 </script>

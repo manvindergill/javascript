@@ -1,0 +1,20 @@
+<script>
+let birthYear = prompt("Enter your birth year:");
+let birthMonth = prompt("Enter your birth month (1-12):");
+let birthDay = prompt("Enter your birth day (1-31):");
+let currentYear = prompt("Enter current year:");
+let currentMonth = prompt("Enter current month (1-12):");
+let currentDay = prompt("Enter current day (1-31):");
+let ageInYears = currentYear - birthYear;
+let ageInDays = ageInYears * 365;
+if (currentMonth < birthMonth) {
+    ageInDays = ageInDays - 365;
+} else if (currentMonth == birthMonth) {
+    if (currentDay < birthDay) {
+        ageInDays = ageInDays - 365;
+    }
+}
+let leapYears = ageInYears / 4;
+ageInDays = ageInDays + leapYears;
+alert("Your age in days is approximately: " + ageInDays + " days");
+</script>
